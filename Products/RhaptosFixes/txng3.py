@@ -1,7 +1,7 @@
 # fix ConflictError
 
 import random
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from zopyx.txng3.core.lexicon import Lexicon
 from zopyx.txng3.core.exceptions import LexiconError
 from zopyx.txng3.core.config import DEFAULT_LANGUAGE

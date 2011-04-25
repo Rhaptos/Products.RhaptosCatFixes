@@ -1,7 +1,7 @@
 # fix ConflictError
 
 import random
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from Products.ZCTextIndex.Lexicon import Lexicon
 
 Lexicon._v_nextid = None

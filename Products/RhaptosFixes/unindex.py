@@ -13,7 +13,7 @@
 
 from BTrees.IIBTree import IITreeSet
 from Products.PluginIndex.common.UnIndex import UnIndex
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 
 
 def insertForwardIndexEntry(self, entry, documentId):

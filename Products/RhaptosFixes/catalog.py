@@ -1,4 +1,4 @@
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from Products.CMFPlone.PloneTool import *
 from Products.CMFCore.interfaces.DublinCore import DublinCore, MutableDublinCore
 from Products.CMFCore.interfaces.Discussions import Discussable

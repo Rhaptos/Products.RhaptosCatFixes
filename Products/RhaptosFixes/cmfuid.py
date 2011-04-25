@@ -3,7 +3,7 @@
 import random
 import BTrees
 
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from Products.CMFCore.utils import getToolByName
 from Products.CMFUid.UniqueIdHandlerTool import UniqueIdHandlerTool
 

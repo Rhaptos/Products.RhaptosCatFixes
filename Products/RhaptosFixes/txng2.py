@@ -1,7 +1,7 @@
 # fix ConflictError
 
 import random
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from BTrees.IIBTree import IITreeSet
 from Products.ZCTextIndex.WidCode import encode
 from Products.TextIndexNG2.lexicons.StandardLexicon import Lexicon

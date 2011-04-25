@@ -1,7 +1,7 @@
 # prevent writing to zodb on each user login
 # each time user login to site plone makes changes in zodb
 
-from Products.CNXFixes import logger
+from Products.RhaptosCatFixes import logger
 from Products.CMFPlone.MembershipTool import MembershipTool
 
 
