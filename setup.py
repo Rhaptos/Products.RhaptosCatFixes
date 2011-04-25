@@ -4,10 +4,10 @@ import os
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = read("Products", "CNXFixes", "version.txt").strip()
+version = read("Products", "RhaptosCatFixes", "version.txt").strip()
 
 
-setup(name='Products.CNXFixes',
+setup(name='Products.RhaptosCatFixes',
       version=version,
       description="",
       long_description=open("README.txt").read() + "\n" +
