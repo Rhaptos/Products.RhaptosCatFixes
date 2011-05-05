@@ -1,4 +1,5 @@
 from StringIO import StringIO
+from transaction import commit
 
 def checkCatalog(self):
     out = StringIO()
@@ -46,7 +47,10 @@ def modifyCatalog(self):
     for i in keep_indexes:
         existing_indexes.remove(i)
 
-    cat.manage_delIndex(existing_indexes)
+    if existing_indexes:
+        cat.manage_delIndex(existing_indexes)
+        print >> out, 'Deleted indexes'
+        commit()
 
     catalog = cat._catalog
     idx = catalog.schema['portal_type']
@@ -61,8 +65,21 @@ def modifyCatalog(self):
         elif 'portal_factory' in uid:
             content.append(uid)
     
-    for uid in content:
-        catalog.uncatalogObject(uid)
+    bad = 0
+    todel = len(content)
+    deleted = 0
 
-    print >> out, len(content)
+    for i,uid in enumerate(content):
+        try:
+            catalog.uncatalogObject(uid)
+            deleted += 1
+        except:
+            bad += 1
+            pass
+        if deleted % 100 == 0:
+            commit()
+
+    print >> out, 'to delete: ', todel
+    print >> out, 'deleted: ', deleted
+    print >> out, 'bad: ', bad
     return out.getvalue()
