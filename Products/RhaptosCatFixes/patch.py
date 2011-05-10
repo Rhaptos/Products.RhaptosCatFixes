@@ -34,7 +34,7 @@ def uncatalogRefs( self, aq, uc=None, rc=None ):
         return
     return self.at_uncatalogRefs( aq, uc, rc )
 
-def reindexObject( self, idxs=() ):
+def reindexObject( self, idxs=[] ):
     if isFactoryContained( self ):
         return
     return self.at_reindexObject( idxs )
