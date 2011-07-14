@@ -1,2 +1,5 @@
+RhaptosCatFixes-0.2
+ * fixup override of editMetadata - patch function body, not entire function
+
 RhaptosCatFixes-0.1
  * initial release

@@ -2,6 +2,7 @@ from Products.RhaptosCatFixes import logger
 from Products.CMFPlone.PloneTool import *
 from Products.CMFCore.interfaces.DublinCore import DublinCore, MutableDublinCore
 from Products.CMFCore.interfaces.Discussions import Discussable
+from Products.CMFCore.utils import getToolByName
 
 
 def editMetadata(self
@@ -98,7 +99,7 @@ def editMetadata(self
         obj.reindexObject(idxs=kwargs.get('updateIndexes', ()))
 
 
-PloneTool.editMetadata = editMetadata
+PloneTool.editMetadata.func_code = editMetadata.func_code 
 logger.info('patched %s', str(PloneTool.editMetadata))
 
 
